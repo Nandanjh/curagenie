@@ -1,0 +1,124 @@
+<svg viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Gradient for the heart -->
+    <linearGradient id="heartGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ff5e62">
+        <animate attributeName="stop-color" values="#ff5e62; #ff9966; #ff5e62" dur="8s" repeatCount="indefinite" />
+      </stop>
+      <stop offset="100%" stop-color="#ff9966">
+        <animate attributeName="stop-color" values="#ff9966; #ff5e62; #ff9966" dur="8s" repeatCount="indefinite" />
+      </stop>
+    </linearGradient>
+    
+    <!-- Pulse animation -->
+    <filter id="pulse" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur" />
+      <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -7" result="glow" />
+      <feBlend in="SourceGraphic" in2="glow" mode="normal" />
+    </filter>
+
+    <!-- Circuit pattern -->
+    <pattern id="circuitPattern" patternUnits="userSpaceOnUse" width="100" height="100">
+      <path d="M10,10 L30,10 L30,30 L50,30 L50,50 L70,50 L70,70 L90,70" stroke="#4287f5" stroke-width="2" fill="none" opacity="0.6">
+        <animate attributeName="stroke-dasharray" values="0,300;300,0" dur="3s" repeatCount="indefinite" />
+      </path>
+      <path d="M10,90 L30,90 L30,70 L50,70 L50,50 L70,50 L70,30 L90,30" stroke="#4287f5" stroke-width="2" fill="none" opacity="0.6">
+        <animate attributeName="stroke-dasharray" values="300,0;0,300" dur="3s" repeatCount="indefinite" />
+      </path>
+    </pattern>
+  </defs>
+
+  <!-- Background tech circle -->
+  <circle cx="200" cy="200" r="150" fill="url(#circuitPattern)" opacity="0.2">
+    <animate attributeName="opacity" values="0.2;0.3;0.2" dur="5s" repeatCount="indefinite" />
+  </circle>
+  
+  <!-- Pulse rings -->
+  <circle cx="200" cy="200" r="120" stroke="#4287f5" stroke-width="2" fill="none" opacity="0.4">
+    <animate attributeName="r" values="120;150;120" dur="4s" repeatCount="indefinite" />
+    <animate attributeName="opacity" values="0.4;0;0.4" dur="4s" repeatCount="indefinite" />
+  </circle>
+  
+  <circle cx="200" cy="200" r="100" stroke="#4287f5" stroke-width="2" fill="none" opacity="0.4">
+    <animate attributeName="r" values="100;130;100" dur="4s" begin="1s" repeatCount="indefinite" />
+    <animate attributeName="opacity" values="0.4;0;0.4" dur="4s" begin="1s" repeatCount="indefinite" />
+  </circle>
+
+  <!-- Heart shape -->
+  <path d="M200,220 L170,190 Q140,160 170,130 Q200,100 200,130 Q200,100 230,130 Q260,160 230,190 Z" fill="url(#heartGradient)">
+    <animate attributeName="d" values="M200,220 L170,190 Q140,160 170,130 Q200,100 200,130 Q200,100 230,130 Q260,160 230,190 Z;
+                                     M200,225 L165,185 Q135,155 165,125 Q200,95 200,125 Q200,95 235,125 Q265,155 235,185 Z;
+                                     M200,220 L170,190 Q140,160 170,130 Q200,100 200,130 Q200,100 230,130 Q260,160 230,190 Z" 
+             dur="1.5s" repeatCount="indefinite" />
+  </path>
+
+  <!-- Heart beat line -->
+  <path d="M140,200 L160,200 L170,180 L180,220 L190,190 L200,200 L210,190 L220,220 L230,180 L240,200 L260,200" 
+        stroke="#4287f5" stroke-width="3" fill="none">
+    <animate attributeName="stroke-dasharray" values="0,500;500,0" dur="3s" repeatCount="indefinite" />
+  </path>
+
+  <!-- Digital dots -->
+  <g>
+    <circle cx="150" cy="250" r="4" fill="#4287f5">
+      <animate attributeName="opacity" values="1;0.2;1" dur="2s" begin="0s" repeatCount="indefinite" />
+    </circle>
+    <circle cx="180" cy="260" r="3" fill="#4287f5">
+      <animate attributeName="opacity" values="1;0.2;1" dur="2s" begin="0.3s" repeatCount="indefinite" />
+    </circle>
+    <circle cx="210" cy="260" r="3" fill="#4287f5">
+      <animate attributeName="opacity" values="1;0.2;1" dur="2s" begin="0.6s" repeatCount="indefinite" />
+    </circle>
+    <circle cx="240" cy="250" r="4" fill="#4287f5">
+      <animate attributeName="opacity" values="1;0.2;1" dur="2s" begin="0.9s" repeatCount="indefinite" />
+    </circle>
+  </g>
+
+  <!-- Tech icons -->
+  <!-- DNA helix -->
+  <g transform="translate(160, 140) scale(0.4)">
+    <path d="M30,0 C60,25 90,50 60,75 C30,100 60,125 90,150" stroke="#4287f5" stroke-width="5" fill="none">
+      <animate attributeName="stroke-dasharray" values="0,200;200,0" dur="5s" repeatCount="indefinite" />
+    </path>
+    <path d="M90,0 C60,25 30,50 60,75 C90,100 60,125 30,150" stroke="#ff9966" stroke-width="5" fill="none">
+      <animate attributeName="stroke-dasharray" values="200,0;0,200" dur="5s" repeatCount="indefinite" />
+    </path>
+    <!-- DNA rungs -->
+    <line x1="30" y1="0" x2="90" y2="0" stroke="#4287f5" stroke-width="3" />
+    <line x1="45" y1="25" x2="75" y2="25" stroke="#4287f5" stroke-width="3" />
+    <line x1="60" y1="50" x2="60" y2="50" stroke="#4287f5" stroke-width="3" />
+    <line x1="45" y1="75" x2="75" y2="75" stroke="#4287f5" stroke-width="3" />
+    <line x1="30" y1="100" x2="90" y2="100" stroke="#4287f5" stroke-width="3" />
+    <line x1="45" y1="125" x2="75" y2="125" stroke="#4287f5" stroke-width="3" />
+    <line x1="30" y1="150" x2="90" y2="150" stroke="#4287f5" stroke-width="3" />
+  </g>
+
+  <!-- Circuit board elements -->
+  <g transform="translate(240, 140) scale(0.4)">
+    <rect x="0" y="0" width="100" height="100" fill="none" stroke="#4287f5" stroke-width="3" />
+    <circle cx="25" cy="25" r="10" fill="#4287f5">
+      <animate attributeName="fill" values="#4287f5;#ff9966;#4287f5" dur="3s" repeatCount="indefinite" />
+    </circle>
+    <circle cx="75" cy="25" r="10" fill="#4287f5">
+      <animate attributeName="fill" values="#4287f5;#ff9966;#4287f5" dur="3s" begin="1s" repeatCount="indefinite" />
+    </circle>
+    <circle cx="25" cy="75" r="10" fill="#4287f5">
+      <animate attributeName="fill" values="#4287f5;#ff9966;#4287f5" dur="3s" begin="1.5s" repeatCount="indefinite" />
+    </circle>
+    <circle cx="75" cy="75" r="10" fill="#4287f5">
+      <animate attributeName="fill" values="#4287f5;#ff9966;#4287f5" dur="3s" begin="0.5s" repeatCount="indefinite" />
+    </circle>
+    <line x1="25" y1="25" x2="75" y2="25" stroke="#4287f5" stroke-width="3">
+      <animate attributeName="stroke-dasharray" values="0,50;50,0" dur="2s" repeatCount="indefinite" />
+    </line>
+    <line x1="75" y1="25" x2="75" y2="75" stroke="#4287f5" stroke-width="3">
+      <animate attributeName="stroke-dasharray" values="0,50;50,0" dur="2s" begin="0.5s" repeatCount="indefinite" />
+    </line>
+    <line x1="75" y1="75" x2="25" y2="75" stroke="#4287f5" stroke-width="3">
+      <animate attributeName="stroke-dasharray" values="0,50;50,0" dur="2s" begin="1s" repeatCount="indefinite" />
+    </line>
+    <line x1="25" y1="75" x2="25" y2="25" stroke="#4287f5" stroke-width="3">
+      <animate attributeName="stroke-dasharray" values="0,50;50,0" dur="2s" begin="1.5s" repeatCount="indefinite" />
+    </line>
+  </g>
+</svg>

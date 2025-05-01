@@ -1,0 +1,366 @@
+<svg viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Glowing effects -->
+    <filter id="blue-glow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="5" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+    
+    <filter id="pink-glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3" result="blur2" />
+      <feComposite in="SourceGraphic" in2="blur2" operator="over" />
+    </filter>
+    
+    <filter id="white-glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="2" result="blur3" />
+      <feComposite in="SourceGraphic" in2="blur3" operator="over" />
+    </filter>
+    
+    <!-- Gradients -->
+    <linearGradient id="phone-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#2b2b40" />
+      <stop offset="100%" stop-color="#1a1a2e" />
+    </linearGradient>
+    
+    <linearGradient id="screen-gradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#101030" />
+      <stop offset="100%" stop-color="#000020" />
+    </linearGradient>
+    
+    <linearGradient id="hospital-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#162447" />
+      <stop offset="100%" stop-color="#0a1128" />
+    </linearGradient>
+    
+    <radialGradient id="data-glow" cx="50%" cy="50%" r="50%" fx="50%" fy="50%">
+      <stop offset="0%" stop-color="#00ccff" stop-opacity="0.9">
+        <animate attributeName="stop-opacity" values="0.9;0.5;0.9" dur="3s" repeatCount="indefinite" />
+      </stop>
+      <stop offset="100%" stop-color="#00aaff" stop-opacity="0" />
+    </radialGradient>
+  </defs>
+  
+  <!-- Hospital building in background -->
+  <g transform="translate(600,330) scale(0.6)">
+    <rect x="-150" y="-250" width="300" height="350" rx="5" ry="5" fill="url(#hospital-gradient)" stroke="#4d7cff" stroke-width="2" opacity="0.9" />
+    
+    <!-- Hospital windows with animation -->
+    <g fill="#4d7cff" opacity="0.8">
+      <rect x="-120" y="-220" width="40" height="40">
+        <animate attributeName="opacity" values="0.8;0.4;0.8" dur="5s" repeatCount="indefinite" begin="0s" />
+      </rect>
+      <rect x="-60" y="-220" width="40" height="40">
+        <animate attributeName="opacity" values="0.8;0.4;0.8" dur="5s" repeatCount="indefinite" begin="1s" />
+      </rect>
+      <rect x="0" y="-220" width="40" height="40">
+        <animate attributeName="opacity" values="0.8;0.4;0.8" dur="5s" repeatCount="indefinite" begin="2s" />
+      </rect>
+      <rect x="60" y="-220" width="40" height="40">
+        <animate attributeName="opacity" values="0.8;0.4;0.8" dur="5s" repeatCount="indefinite" begin="3s" />
+      </rect>
+      
+      <rect x="-120" y="-160" width="40" height="40">
+        <animate attributeName="opacity" values="0.8;0.4;0.8" dur="5s" repeatCount="indefinite" begin="1.5s" />
+      </rect>
+      <rect x="-60" y="-160" width="40" height="40">
+        <animate attributeName="opacity" values="0.8;0.4;0.8" dur="5s" repeatCount="indefinite" begin="2.5s" />
+      </rect>
+      <rect x="0" y="-160" width="40" height="40">
+        <animate attributeName="opacity" values="0.8;0.4;0.8" dur="5s" repeatCount="indefinite" begin="3.5s" />
+      </rect>
+      <rect x="60" y="-160" width="40" height="40">
+        <animate attributeName="opacity" values="0.8;0.4;0.8" dur="5s" repeatCount="indefinite" begin="0.5s" />
+      </rect>
+      
+      <rect x="-120" y="-100" width="40" height="40">
+        <animate attributeName="opacity" values="0.8;0.4;0.8" dur="5s" repeatCount="indefinite" begin="2s" />
+      </rect>
+      <rect x="-60" y="-100" width="40" height="40">
+        <animate attributeName="opacity" values="0.8;0.4;0.8" dur="5s" repeatCount="indefinite" begin="3s" />
+      </rect>
+      <rect x="0" y="-100" width="40" height="40">
+        <animate attributeName="opacity" values="0.8;0.4;0.8" dur="5s" repeatCount="indefinite" begin="4s" />
+      </rect>
+      <rect x="60" y="-100" width="40" height="40">
+        <animate attributeName="opacity" values="0.8;0.4;0.8" dur="5s" repeatCount="indefinite" begin="1s" />
+      </rect>
+    </g>
+    
+    <!-- Hospital entrance -->
+    <rect x="-40" y="30" width="80" height="70" fill="#4d7cff" opacity="0.6" />
+    
+    <!-- Hospital cross -->
+    <g filter="url(#pink-glow)">
+      <rect x="-15" y="-120" width="30" height="80" fill="#ff3366" rx="5" ry="5">
+        <animate attributeName="opacity" values="1;0.7;1" dur="3s" repeatCount="indefinite" />
+      </rect>
+      <rect x="-40" y="-95" width="80" height="30" fill="#ff3366" rx="5" ry="5">
+        <animate attributeName="opacity" values="1;0.7;1" dur="3s" repeatCount="indefinite" />
+      </rect>
+    </g>
+  </g>
+  
+  <!-- Mobile phone -->
+  <g transform="translate(260,300)">
+    <!-- Phone body -->
+    <rect x="-80" y="-150" width="160" height="300" rx="20" ry="20" fill="url(#phone-gradient)" stroke="#5c5c8a" stroke-width="2" />
+    
+    <!-- Phone screen -->
+    <rect x="-70" y="-140" width="140" height="280" rx="10" ry="10" fill="url(#screen-gradient)" />
+    
+    <!-- Screen elements -->
+    <g filter="url(#white-glow)">
+      <!-- Heart rate monitor animation -->
+      <polyline points="-50,-50 -30,-50 -20,-90 -10,-20 0,-50 10,-50 30,-50" 
+                stroke="#ff3366" stroke-width="3" fill="none">
+        <animate attributeName="points" 
+                 values="-50,-50 -30,-50 -20,-90 -10,-20 0,-50 10,-50 30,-50;
+                        -50,-50 -30,-50 -20,-80 -10,-30 0,-50 10,-50 30,-50;
+                        -50,-50 -30,-50 -20,-100 -10,-10 0,-50 10,-50 30,-50;
+                        -50,-50 -30,-50 -20,-90 -10,-20 0,-50 10,-50 30,-50" 
+                 dur="2s" repeatCount="indefinite" />
+      </polyline>
+      
+      <!-- AI brain visualization -->
+      <path d="M0,20 C-20,0 -30,40 -10,50 C-5,70 5,70 10,50 C30,40 20,0 0,20 Z" 
+            fill="#00aaff" opacity="0.7" stroke="#00ccff" stroke-width="1.5">
+        <animate attributeName="d" 
+                 values="M0,20 C-20,0 -30,40 -10,50 C-5,70 5,70 10,50 C30,40 20,0 0,20 Z;
+                        M0,20 C-22,2 -32,42 -12,52 C-7,72 7,72 12,52 C32,42 22,2 0,20 Z;
+                        M0,20 C-20,0 -30,40 -10,50 C-5,70 5,70 10,50 C30,40 20,0 0,20 Z" 
+                 dur="3s" repeatCount="indefinite" />
+      </path>
+      
+      <!-- Data visualization bars -->
+      <rect x="-50" y="80" width="10" height="20" fill="#00ccff">
+        <animate attributeName="height" values="20;40;20" dur="2s" repeatCount="indefinite" begin="0s" />
+      </rect>
+      <rect x="-30" y="80" width="10" height="30" fill="#00ccff">
+        <animate attributeName="height" values="30;10;30" dur="2s" repeatCount="indefinite" begin="0.5s" />
+      </rect>
+      <rect x="-10" y="80" width="10" height="40" fill="#00ccff">
+        <animate attributeName="height" values="40;20;40" dur="2s" repeatCount="indefinite" begin="1s" />
+      </rect>
+      <rect x="10" y="80" width="10" height="20" fill="#00ccff">
+        <animate attributeName="height" values="20;50;20" dur="2s" repeatCount="indefinite" begin="1.5s" />
+      </rect>
+      <rect x="30" y="80" width="10" height="30" fill="#00ccff">
+        <animate attributeName="height" values="30;15;30" dur="2s" repeatCount="indefinite" begin="0.75s" />
+      </rect>
+    </g>
+  </g>
+  
+  <!-- Data connection between phone and hospital -->
+  <g>
+    <!-- Circular data hub between phone and hospital -->
+    <circle cx="400" cy="300" r="25" fill="url(#data-glow)" opacity="0.7">
+      <animate attributeName="r" values="25;30;25" dur="4s" repeatCount="indefinite" />
+    </circle>
+    
+    <!-- Pulse rings emanating from data hub -->
+    <circle cx="400" cy="300" r="35" stroke="#00aaff" stroke-width="2" fill="none">
+      <animate attributeName="r" values="30;90;30" dur="4s" repeatCount="indefinite" />
+      <animate attributeName="opacity" values="0.8;0;0.8" dur="4s" repeatCount="indefinite" />
+    </circle>
+    <circle cx="400" cy="300" r="45" stroke="#00aaff" stroke-width="1.5" fill="none">
+      <animate attributeName="r" values="45;120;45" dur="6s" repeatCount="indefinite" />
+      <animate attributeName="opacity" values="0.6;0;0.6" dur="6s" repeatCount="indefinite" />
+    </circle>
+    
+    <!-- Connection lines with flowing data -->
+    <path d="M335,300 Q360,260 400,300 Q440,340 475,300" 
+          stroke="#00aaff" stroke-width="2" fill="none" stroke-dasharray="5,3">
+      <animate attributeName="stroke-dashoffset" values="0;-16" dur="2s" repeatCount="indefinite" />
+    </path>
+    
+    <!-- Flowing data particles -->
+    <g filter="url(#blue-glow)">
+      <circle cx="335" cy="300" r="3" fill="#ffffff">
+        <animate attributeName="cx" values="335;475;335" dur="3s" repeatCount="indefinite" begin="0s" />
+        <animate attributeName="cy" values="300;270;300;330;300" dur="3s" repeatCount="indefinite" begin="0s" />
+      </circle>
+      <circle cx="475" cy="300" r="3" fill="#ffffff">
+        <animate attributeName="cx" values="475;335;475" dur="3s" repeatCount="indefinite" begin="1.5s" />
+        <animate attributeName="cy" values="300;330;300;270;300" dur="3s" repeatCount="indefinite" begin="1.5s" />
+      </circle>
+    </g>
+  </g>
+  
+  <!-- AI neural network visualization surrounding the system -->
+  <g filter="url(#blue-glow)">
+    <!-- Neural nodes -->
+    <circle cx="180" cy="160" r="5" fill="#00ffff">
+      <animate attributeName="r" values="5;6;5" dur="3s" repeatCount="indefinite" begin="0s" />
+    </circle>
+    <circle cx="320" cy="120" r="5" fill="#00ffff">
+      <animate attributeName="r" values="5;6;5" dur="3s" repeatCount="indefinite" begin="0.5s" />
+    </circle>
+    <circle cx="480" cy="150" r="5" fill="#00ffff">
+      <animate attributeName="r" values="5;6;5" dur="3s" repeatCount="indefinite" begin="1s" />
+    </circle>
+    <circle cx="150" cy="400" r="5" fill="#00ffff">
+      <animate attributeName="r" values="5;6;5" dur="3s" repeatCount="indefinite" begin="1.5s" />
+    </circle>
+    <circle cx="330" cy="440" r="5" fill="#00ffff">
+      <animate attributeName="r" values="5;6;5" dur="3s" repeatCount="indefinite" begin="2s" />
+    </circle>
+    <circle cx="500" cy="410" r="5" fill="#00ffff">
+      <animate attributeName="r" values="5;6;5" dur="3s" repeatCount="indefinite" begin="2.5s" />
+    </circle>
+    
+    <!-- Neural connections -->
+    <line x1="180" y1="160" x2="320" y2="120" stroke="#00ffff" stroke-width="1.5">
+      <animate attributeName="stroke-opacity" values="0.7;0.3;0.7" dur="4s" repeatCount="indefinite" begin="0s" />
+    </line>
+    <line x1="320" y1="120" x2="480" y2="150" stroke="#00ffff" stroke-width="1.5">
+      <animate attributeName="stroke-opacity" values="0.7;0.3;0.7" dur="4s" repeatCount="indefinite" begin="0.5s" />
+    </line>
+    <line x1="180" y1="160" x2="400" y2="300" stroke="#00ffff" stroke-width="1.5">
+      <animate attributeName="stroke-opacity" values="0.7;0.3;0.7" dur="4s" repeatCount="indefinite" begin="1s" />
+    </line>
+    <line x1="320" y1="120" x2="400" y2="300" stroke="#00ffff" stroke-width="1.5">
+      <animate attributeName="stroke-opacity" values="0.7;0.3;0.7" dur="4s" repeatCount="indefinite" begin="1.5s" />
+    </line>
+    <line x1="480" y1="150" x2="400" y2="300" stroke="#00ffff" stroke-width="1.5">
+      <animate attributeName="stroke-opacity" values="0.7;0.3;0.7" dur="4s" repeatCount="indefinite" begin="2s" />
+    </line>
+    <line x1="150" y1="400" x2="400" y2="300" stroke="#00ffff" stroke-width="1.5">
+      <animate attributeName="stroke-opacity" values="0.7;0.3;0.7" dur="4s" repeatCount="indefinite" begin="2.5s" />
+    </line>
+    <line x1="330" y1="440" x2="400" y2="300" stroke="#00ffff" stroke-width="1.5">
+      <animate attributeName="stroke-opacity" values="0.7;0.3;0.7" dur="4s" repeatCount="indefinite" begin="3s" />
+    </line>
+    <line x1="500" y1="410" x2="400" y2="300" stroke="#00ffff" stroke-width="1.5">
+      <animate attributeName="stroke-opacity" values="0.7;0.3;0.7" dur="4s" repeatCount="indefinite" begin="3.5s" />
+    </line>
+    <line x1="150" y1="400" x2="330" y2="440" stroke="#00ffff" stroke-width="1.5">
+      <animate attributeName="stroke-opacity" values="0.7;0.3;0.7" dur="4s" repeatCount="indefinite" begin="4s" />
+    </line>
+    <line x1="330" y1="440" x2="500" y2="410" stroke="#00ffff" stroke-width="1.5">
+      <animate attributeName="stroke-opacity" values="0.7;0.3;0.7" dur="4s" repeatCount="indefinite" begin="4.5s" />
+    </line>
+  </g>
+  
+  <!-- Floating medical data symbols -->
+  <g filter="url(#pink-glow)">
+    <!-- DNA helix symbol -->
+    <g transform="translate(200,220) scale(0.5)">
+      <path d="M-15,-30 Q-30,-15 -15,0 Q0,15 -15,30 M15,-30 Q30,-15 15,0 Q0,15 15,30" 
+            stroke="#ff3366" stroke-width="2" fill="none">
+        <animate attributeName="d" 
+                 values="M-15,-30 Q-30,-15 -15,0 Q0,15 -15,30 M15,-30 Q30,-15 15,0 Q0,15 15,30;
+                        M-15,-30 Q-25,-15 -15,0 Q-5,15 -15,30 M15,-30 Q25,-15 15,0 Q5,15 15,30;
+                        M-15,-30 Q-30,-15 -15,0 Q0,15 -15,30 M15,-30 Q30,-15 15,0 Q0,15 15,30" 
+                 dur="4s" repeatCount="indefinite" />
+      </path>
+      <line x1="-15" y1="-20" x2="15" y2="-20" stroke="#33ccff" stroke-width="1.5" />
+      <line x1="-15" y1="-10" x2="15" y2="-10" stroke="#33ccff" stroke-width="1.5" />
+      <line x1="-15" y1="0" x2="15" y2="0" stroke="#33ccff" stroke-width="1.5" />
+      <line x1="-15" y1="10" x2="15" y2="10" stroke="#33ccff" stroke-width="1.5" />
+      <line x1="-15" y1="20" x2="15" y2="20" stroke="#33ccff" stroke-width="1.5" />
+    </g>
+    
+    <!-- Pill icon -->
+    <g transform="translate(590,220) rotate(45)">
+      <rect x="-20" y="-10" width="40" height="20" rx="10" ry="10" fill="#ff3366" opacity="0.8">
+        <animate attributeName="opacity" values="0.8;0.5;0.8" dur="3s" repeatCount="indefinite" />
+      </rect>
+      <rect x="-20" y="-10" width="20" height="20" rx="10" ry="10" fill="#ffffff" opacity="0.8">
+        <animate attributeName="opacity" values="0.8;0.5;0.8" dur="3s" repeatCount="indefinite" />
+      </rect>
+    </g>
+    
+    <!-- Health chart -->
+    <g transform="translate(500,180) scale(0.6)">
+      <rect x="-30" y="-30" width="60" height="60" rx="5" ry="5" fill="none" stroke="#ffffff" stroke-width="1.5" />
+      <polyline points="-25,-10 -15,10 -5,-5 5,20 15,0 25,10" 
+                stroke="#00ccff" stroke-width="2" fill="none">
+        <animate attributeName="points" 
+                 values="-25,-10 -15,10 -5,-5 5,20 15,0 25,10;
+                        -25,-5 -15,15 -5,-10 5,15 15,-5 25,5;
+                        -25,-10 -15,10 -5,-5 5,20 15,0 25,10" 
+                 dur="4s" repeatCount="indefinite" />
+      </polyline>
+    </g>
+  </g>
+  
+  <!-- Abstract data streams -->
+  <g>
+    <path d="M160,240 Q200,230 240,240 Q280,250 320,240" 
+          stroke="#00ffff" stroke-width="1.5" fill="none" opacity="0.7" stroke-dasharray="4,2">
+      <animate attributeName="d" 
+               values="M160,240 Q200,230 240,240 Q280,250 320,240;
+                      M160,240 Q200,250 240,240 Q280,230 320,240;
+                      M160,240 Q200,230 240,240 Q280,250 320,240" 
+               dur="6s" repeatCount="indefinite" />
+      <animate attributeName="stroke-dashoffset" values="0;-12" dur="2s" repeatCount="indefinite" />
+    </path>
+    
+    <path d="M480,240 Q520,230 560,240 Q600,250 640,240" 
+          stroke="#00ffff" stroke-width="1.5" fill="none" opacity="0.7" stroke-dasharray="4,2">
+      <animate attributeName="d" 
+               values="M480,240 Q520,230 560,240 Q600,250 640,240;
+                      M480,240 Q520,250 560,240 Q600,230 640,240;
+                      M480,240 Q520,230 560,240 Q600,250 640,240" 
+               dur="6s" repeatCount="indefinite" />
+      <animate attributeName="stroke-dashoffset" values="0;-12" dur="2s" repeatCount="indefinite" />
+    </path>
+    
+    <path d="M200,380 Q240,370 280,380 Q320,390 360,380" 
+          stroke="#ff3366" stroke-width="1.5" fill="none" opacity="0.7" stroke-dasharray="4,2">
+      <animate attributeName="d" 
+               values="M200,380 Q240,370 280,380 Q320,390 360,380;
+                      M200,380 Q240,390 280,380 Q320,370 360,380;
+                      M200,380 Q240,370 280,380 Q320,390 360,380" 
+               dur="5s" repeatCount="indefinite" />
+      <animate attributeName="stroke-dashoffset" values="0;12" dur="2s" repeatCount="indefinite" />
+    </path>
+    
+    <path d="M440,380 Q480,370 520,380 Q560,390 600,380" 
+          stroke="#ff3366" stroke-width="1.5" fill="none" opacity="0.7" stroke-dasharray="4,2">
+      <animate attributeName="d" 
+               values="M440,380 Q480,370 520,380 Q560,390 600,380;
+                      M440,380 Q480,390 520,380 Q560,370 600,380;
+                      M440,380 Q480,370 520,380 Q560,390 600,380" 
+               dur="5s" repeatCount="indefinite" />
+      <animate attributeName="stroke-dashoffset" values="0;12" dur="2s" repeatCount="indefinite" />
+    </path>
+  </g>
+  
+  <!-- Floating diagnostic icons -->
+  <g>
+    <!-- Stethoscope icon -->
+    <g transform="translate(120,300) scale(0.4)" filter="url(#white-glow)">
+      <circle cx="0" cy="-20" r="15" stroke="#ffffff" stroke-width="3" fill="none">
+        <animate attributeName="r" values="15;17;15" dur="3s" repeatCount="indefinite" />
+      </circle>
+      <path d="M0,-5 C0,20 -20,20 -20,40 L-20,60 C-20,75 0,75 0,60 L0,40" 
+            stroke="#ffffff" stroke-width="3" fill="none">
+        <animate attributeName="d" 
+                 values="M0,-5 C0,20 -20,20 -20,40 L-20,60 C-20,75 0,75 0,60 L0,40;
+                        M0,-5 C0,20 -25,20 -25,40 L-25,60 C-25,75 -5,75 -5,60 L-5,40;
+                        M0,-5 C0,20 -20,20 -20,40 L-20,60 C-20,75 0,75 0,60 L0,40" 
+                 dur="6s" repeatCount="indefinite" />
+      </path>
+    </g>
+    
+    <!-- Lab flask -->
+    <g transform="translate(680,380) scale(0.4)" filter="url(#white-glow)">
+      <path d="M-10,-30 L-10,5 L-20,30 C-20,40 20,40 20,30 L10,5 L10,-30 Z" 
+            stroke="#ffffff" stroke-width="2" fill="none">
+        <animate attributeName="stroke-opacity" values="1;0.5;1" dur="4s" repeatCount="indefinite" />
+      </path>
+      <line x1="-10" y1="-30" x2="10" y2="-30" stroke="#ffffff" stroke-width="2" />
+      <path d="M-12,10 L12,10" stroke="#00ccff" stroke-width="2">
+        <animate attributeName="d" 
+                 values="M-12,10 L12,10;M-12,15 L12,15;M-12,10 L12,10" 
+                 dur="3s" repeatCount="indefinite" />
+      </path>
+    </g>
+  </g>
+  
+  <!-- Animated scanline effect -->
+  <rect x="0" y="0" width="800" height="10" fill="#00aaff" opacity="0.1">
+    <animate attributeName="y" values="0;600;0" dur="10s" repeatCount="indefinite" />
+  </rect>
+</svg>
